@@ -1,7 +1,8 @@
 import { get } from "svelte/store";
-import { currentArticle, gameResults, players } from "./gamedata";
+import { currentArticle, gameResults, players, pin as gamePin } from "./gamedata";
 import type Player from "./player";
 import { localPlayer } from "./playerdata";
+
 import { goto } from "$app/navigation";
 
 export let ws: WebSocket | null = null;
@@ -115,6 +116,7 @@ function handleMessage(message : string) {
 }
 
 export function joinGame(pin : number) {
+    gamePin.set(pin);
     send({
         id: "joinGame",
         pin: pin

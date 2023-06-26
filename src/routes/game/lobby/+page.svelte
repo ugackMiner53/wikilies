@@ -1,6 +1,6 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
-    import { players } from "$lib/client/gamedata";
+    import { pin, players } from "$lib/client/gamedata";
     import { localPlayer } from "$lib/client/playerdata";
     import { sendJudge, sendStartGame, ws } from "$lib/client/websocket";
     import { onMount } from "svelte";
@@ -40,3 +40,6 @@
         <button disabled={$players.length < 2 || !$players.every(player => player.hasArticle) || !$localPlayer.hasArticle || !($players.some(player => player.judge) || $localPlayer.judge)} on:click={() => {sendStartGame()}} >Start Game</button>
     </div>
 {/if}
+<div>
+    <h1>{$pin}</h1>
+</div>

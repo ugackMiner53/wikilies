@@ -1,6 +1,7 @@
 <script lang="ts">
     import { ws, establishWebSocket} from "$lib/client/websocket";
     import { localPlayer } from "$lib/client/playerdata";
+    import { goto } from "$app/navigation";
     let pin : number;
 
 </script>
@@ -16,9 +17,10 @@
     <h2>Because two of these people will be</h2>
 </div>
 
-<form>
-    
+
+<input type="text" name="Name" id="nameInput" placeholder="Enter your name" bind:value={$localPlayer.name}>
+<form on:submit|preventDefault={() => {goto(`/game?pin=${pin}`)}}>
+    <input type="number" maxlength="4" max="9999" min="1000" id="pinInput" bind:value={pin}>
+    <button disabled={!$localPlayer.name || !pin} type="submit">Join Game</button>
 </form>
-<input type="number" maxlength="4" max="9999" min="1000" id="pinInput" bind:value={pin}>
-<input type="text" name="Name" id="nameInput" bind:value={$localPlayer.name}>
-<a href={`/game?pin=${pin}`}>Join Game</a>
+<button disabled={!$localPlayer.name} on:click={() => {goto(`/game?create`)}}>Create new Lobby</button>
