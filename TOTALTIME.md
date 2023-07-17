@@ -3,4 +3,5 @@
 | Day | Time |
 | --- | --- |
 | One | `5h 1m 15s` |
-| Two (session one) | `6h 0m 30s` |
+| Two | `6h 29m 06s` |
+| Twenty One | `2h 45m 43s` |

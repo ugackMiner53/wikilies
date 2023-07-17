@@ -1,5 +1,9 @@
 $background-colors: #71D1B3, #0E65E0;
 
+* {
+    font-family: Arial, sans-serif;
+}
+
 @mixin background {
     width: 100%;
     height: 100%;
