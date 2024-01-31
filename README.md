@@ -1,38 +1,31 @@
-# create-svelte
+# Wikipedia Lies
+*Inspired by [The Technical Difficulties](https://www.techdif.co.uk/)' [Two Of These People Are Lying](https://www.youtube.com/playlist?list=PLfx61sxf1Yz2I-c7eMRk9wBUUDCJkU7H0) series.*
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## How To Play
+You can either create a new lobby or join an existing one on the homepage, as long as you enter your username first.
 
-## Creating a project
+Once you're in a lobby, you'll be prompted to pick an article at the top right.  
+Clicking on this will open the article browser, and prompt you with five random articles.  
+You can then click on any of them to read the text of the article.  
+If you don't like any of the random ones, click "Show Random Articles" to get five new articles!  
+Have a specific article in mind? Use the searchbar to jump directly to any article you type in!
 
-If you're seeing this, you've probably already done this step. Congrats!
+Use the "Select This Article" button to confirm your article choice and be taken back to the lobby screen.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+As the host of the lobby, you have the power to choose who will be judging, which can be done by clicking on their name.
+Their name should become bold and gain the text "(Judging)" afterwards.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Once the game starts, one player's article will be chosen at random, and everyone will need to tell the judge what the article is about.
+However, because some players obviously haven't read the article, only one person is telling the truth, and everyone else is lying!
 
-## Developing
+As the judge, you then need to figure out who is telling the truth, and as a player, you need to convince the judge that you're telling the truth (even if you haven't read the article!)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+After each round, a results screen will show, and the person whose article was picked will be prompted to go and choose a new article.
 
-```bash
-npm run dev
+## Installation
+1. Download the repository and run `npm install` (or `pnpm install`, etc.)
+2. Build the project by running `npm build`
+3. Run the project with `npm run prodServer`
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Contributing
+If you want to contribute, open a [pull request](https://github.com/ugackMiner53/wikilies/pulls) and I should be able to review it quickly!
