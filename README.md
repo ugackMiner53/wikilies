@@ -22,6 +22,10 @@ As the judge, you then need to figure out who is telling the truth, and as a pla
 
 After each round, a results screen will show, and the person whose article was picked will be prompted to go and choose a new article.
 
+## Communication
+
+Communication between players and the judge currently happens out-of-band through methods like a voice call, in-person, or a messaging app. This could be moved into the game in the future.
+
 ## Installation
 1. Download the repository and run `npm install` (or `pnpm install`, etc.)
 2. Build the project by running `npm build`

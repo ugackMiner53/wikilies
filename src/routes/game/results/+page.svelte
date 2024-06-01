@@ -52,4 +52,4 @@
     {/if}
 {/if}
 
-<button on:click={() => {goto("./lobby")}}>Continue</button>
+<button on:click={() => {goto("/game/lobby")}}>Continue</button>

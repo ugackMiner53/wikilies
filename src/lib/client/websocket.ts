@@ -95,12 +95,12 @@ function handleMessage(message : string) {
                 guessedId: data.guessId,
                 trueId: data.trueId
             });
-            goto("./results");
+            goto("/game/results");
             break;
         }
         case "startGame": {
             currentArticle.set(data.article);
-            goto("./guessing");
+            goto("/game/guessing");
             break;
         }
         case "host": {

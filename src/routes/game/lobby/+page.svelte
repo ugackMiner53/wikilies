@@ -73,7 +73,7 @@
     {/if}
 </div>
 
-<button id="changeArticle" on:click={() => {goto("./findarticle")}}>
+<button id="changeArticle" on:click={() => {goto("/game/findarticle")}}>
     {#if $localPlayer.article}
         <p>Your article is <b>{$localPlayer.article}</b>!</p>
     {:else}

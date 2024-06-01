@@ -86,7 +86,7 @@
         <input type="search" name="Search" id="searchBox" placeholder="Search for articles" bind:value={searchArticle}>
         <button type="submit">Search</button>
     </form>
-    <button on:click={() => {if ($localPlayer.article != "") {$localPlayer.hasArticle = true; sendPlayerData(); goto("./lobby");}}} disabled={$localPlayer.article == ""}>Select this article</button>
+    <button on:click={() => {if ($localPlayer.article != "") {$localPlayer.hasArticle = true; sendPlayerData(); goto("/game/lobby");}}} disabled={$localPlayer.article == ""}>Select this article</button>
     <button on:click={() => {$localPlayer.article = ""; getRandomArticles()}}>Show random articles</button>
 </div>
 <div id="wikipediaViewer">
